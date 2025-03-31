@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Portada */
+.container-portada {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-image: url(../image/images.jpeg);
+    background-size: 200%;
+    animation: movimiento 20s infinite linear alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes movimiento {
+    from {
+        background-position: bottom left;
+    }
+    to {
+        background-position: top right;
+    }
+}
+
+.capa-gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left, black);
+    opacity: 0.5; /* Ajusta la opacidad para mayor contraste con el texto */
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 800px; /* Limita el tamaño máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    z-index: 1;
+    color: white;
+}
+
+.container-details {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.details h1 {
+    font-size: 100px; /* Aumento de tamaño */
+    font-weight: 700; /* Fuente más gruesa */
+    margin: 0;
+    text-align: center;
+    font-family: 'Impact', sans-serif; /* Fuente más llamativa */
+}
+
+.details p {
+    margin-top: 10px;
+    font-size: 200px; /* Aumento de tamaño */
+    font-weight: 400; /* Fuente más equilibrada */
+    margin: 0;
+    font-family: 'Comic Sans MS', sans-serif; /* Fuente más llamativa */
+}
+
+/* Ícono de graduación */
+.icono-graduacion {
+    font-size: 50px; /* Tamaño del ícono */
+    color: #fffdf7; /* Color del ícono */
+    margin-top: 10px; /* Espacio superior */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 500px) {
+    .details p {
+        font-size: 18px;
+    }
+    
+    .container {
+        padding: 10px; /* Menos padding en pantallas pequeñas */
+    }
+    
+    .container-portada {
+        height: 250px; /* Ajustar altura de la portada para pantallas pequeñas */
+    }
+}
+
+.container {
+    max-width: 90%;
+    width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.container-text {
+    max-width: 90%;
+    width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container-text p {
+    font-size: 1.5em; /* Tamaño de fuente ajustado y un poco más grande */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 0; /* Eliminar márgenes */
+    font-family: 'Roboto', sans-serif; /* Tipo de fuente */
+    text-align: center; /* Justificar el texto */
+}
+
+.slider-frame {
+	width: 100%;  /* El contenedor se ajustará al 100% del ancho del contenedor padre */
+	height: auto;  /* El alto se ajustará automáticamente según el tamaño de las imágenes */
+	margin: 50px auto 0;
+	overflow: hidden;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;  /* Asegura que se pueda mover todo el conjunto de imágenes */
+	animation: slide 30s infinite ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;  /* Las imágenes se ajustan al 100% del contenedor */
+	height: auto;  /* Mantiene la relación de aspecto original */
+	object-fit: contain;  /* Ajusta la imagen sin distorsión, añadiendo bordes si es necesario */
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	25% {margin-left: -100%;}
+	50% {margin-left: -200%;}
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+/* Contenedor principal */
+.container-fecha {
+    background-color: #f8f9fa; /* Fondo claro */
+    padding: 20px;
+    max-width: 400px; /* Controla el ancho del contenedor */
+    margin: 50px auto;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centra el texto */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    position: relative; /* Necesario para posicionar el adorno */
+}
+
+/* Icono del calendario */
+.icono-fecha {
+    font-size: 50px;
+    color: #007bff; /* Color vibrante */
+    margin-bottom: 10px;
+}
+
+.fecha-evento {
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: 500; /* Peso de la fuente */
+    color: #333; /* Color oscuro para el texto */
+    margin-bottom: 5px; /* Espacio debajo del texto */
+}
+
+/* Fecha destacada */
+.fecha {
+    font-size: 50px; /* Tamaño mayor para la fecha */
+    font-weight: 700; /* Mayor énfasis en la fecha */
+    color: #007bff; /* Color llamativo para la fecha */
+    display: block;
+    margin-top: 5px;
+}
+
+/* Decoración adicional */
+.decoracion {
+    width: 80px;
+    height: 5px;
+    background-color: #007bff; /* Color decorativo */
+    margin: 20px auto;
+    border-radius: 3px;
+}
+
+/* Efecto hover */
+.container-fecha:hover {
+    background-color: #e9ecef; /* Fondo ligeramente más oscuro al hacer hover */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+    transform: translateY(-5px); /* Sutil efecto de movimiento */
+    transition: all 0.3s ease; /* Transición suave */
+}
+.container-ubicacion {
+    max-width: 90%;
+    width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* Estilo para los iconos */
+.informacion-evento i {
+    margin-right: 10px; /* Espacio a la derecha del icono */
+    color: #007bff; /* Color del icono */
+    font-size: 20px; /* Tamaño del icono */
+}
+
+/* Enlace de Google Maps */
+.enlace-ubicacion {
+    font-size: 16px;
+    color: #007bff; /* Color azul para el enlace */
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+    display: inline-block; /* Hace que el enlace se muestre en bloque */
+}
+
+.enlace-ubicacion i {
+    margin-right: 5px; /* Espacio a la derecha del icono */
+}
+
+.enlace-ubicacion:hover {
+    text-decoration: underline; /* Subraya el enlace cuando se pasa el mouse */
+    color: #007bff; /* Color rojo cuando se pasa el mouse */
+    transition: color 0.3s ease;
+}
+.imagen-ubicacion img {
+    width: 500px; /* Ajuste del tamaño de la imagen en ancho */
+    height: 300px; /* Ajuste del tamaño de la imagen en alto */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border-radius: 15px; /* Bordes redondeados en la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y la información */
+    align-items: center;
+}
+
+/* Estilo para el contenedor de vestimenta */
+.container-vestimenta {
+    max-width: 90%;
+    width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Información sobre el código de vestimenta */
+.informacion-vestimenta {
+    padding: 20px;
+    flex: 1;
+    background-color: #ffffff; /* Fondo verde */
+    color: #000000; /* Texto blanco */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 15px 15px 0; /* Bordes redondeados solo en el lado derecho */
+}
+
+/* Título de código de vestimenta */
+.informacion-vestimenta h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Detalles del código de vestimenta */
+.detalle-vestimenta {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+/* Iconos dentro de los detalles */
+.detalle-vestimenta i {
+    margin-right: 10px; /* Espacio entre icono y texto */
+    color: #007bff; /* Color del icono */
+}
+
+/* Estilo del contenedor de invitación */
+.container-invitacion {
+    background-color: #f8f9fa;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo del título de la invitación */
+.container-invitacion h2 {
+    font-size: 32px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Estilo del texto de la invitación */
+.invitacion-texto {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+/* Iconos dentro de la invitación */
+.invitacion-texto i {
+    margin-right: 10px; /* Espacio entre icono y texto */
+    color: #28a745; /* Color de los iconos */
+}
+
+/* Estilo para el enlace de ubicación */
+.ubicacion-link {
+    color: #007bff; /* Color azul para el enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 600; /* Negrita para mayor énfasis */
+}
+
+.ubicacion-link:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+    color: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+
+/* Efecto hover en los textos de la invitación */
+.invitacion-texto:hover {
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+/* Estilo del contenedor de confirmación */
+.container-confirmacion {
+    background-color: #f0f8ff;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo del título de la confirmación */
+.container-confirmacion h2 {
+    font-size: 32px;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+/* Estilo del texto de confirmación */
+.confirmacion-texto {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+/* Iconos dentro del texto de confirmación */
+.confirmacion-texto i {
+    margin-right: 10px; /* Espacio entre icono y texto */
+    color: #28a745; /* Color de los iconos */
+}
+
+/* Estilo del botón de confirmación */
+.btn-confirmar {
+    display: inline-block;
+    background-color: #25d366; /* Color verde WhatsApp */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirmar:hover {
+    background-color: #128c7e; /* Cambio de color al pasar el ratón */
+}
+
+/* Efecto hover en el texto de confirmación */
+.confirmacion-texto:hover {
+    color: #28a745;
+    transition: color 0.3s ease;
+}
+
